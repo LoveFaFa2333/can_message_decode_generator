@@ -1,6 +1,6 @@
 # can_message_decode_generator
 # Description
-  Generate can message decode code from dbc file.
+  Generate CAN message decode code from dbc file.
 # How to use
 ### 1. Generate decode hpp file
 (1) Put the dbc file in directory <can_message_cpp_generator/dbc/>
