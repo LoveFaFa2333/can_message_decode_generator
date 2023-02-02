@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/wg/Documents/can_message_decode/build",
+  "command": "/usr/bin/c++   -I/home/wg/Documents/can_message_decode/can_message_decode/include  -g   -std=gnu++14 -o CMakeFiles/run_decode_test.dir/decode_test.cpp.o -c /home/wg/Documents/can_message_decode/can_message_decode/decode_test.cpp",
+  "file": "/home/wg/Documents/can_message_decode/can_message_decode/decode_test.cpp"
+}
+]
