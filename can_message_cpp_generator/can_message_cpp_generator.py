@@ -1,8 +1,3 @@
-'''
-Descripttion: CAN message cpp file generator
-Author: Gang Wang
-Date: 2023-01-30 09:30:40
-'''
 import cantools
 
 def canMessageHppGenerator():
@@ -66,7 +61,6 @@ def canMessageHppGenerator():
         hpp_file.write('\t\tthis->data_bin = _data_bin_type(this->data);\n')
         hpp_file.write('\t\tthis->decode();\n')
         hpp_file.write('\t}\n')
-
 
         hpp_file.write('\t// 构造函数\n')
         hpp_file.write('\texplicit ' + message_name + '(const _data_type& message_data){\n')
@@ -228,7 +222,7 @@ def canMessageHppGenerator():
                 hpp_file.write('\t\t\t\tj += (j%8 == 0)? 15 : -1;\n') 
                 hpp_file.write('\t\t\t\tindex++;\n') 
                 hpp_file.write('\t\t\t}\n') 
-                hpp_file.write('\t\t\tthis->' + signal_name[j].lower() + '.data = utils::bin2int(' + signal_name[j].lower() +'_data_bin, this->' + signal_name[j].lower() + '.signal_length());\n')
+                hpp_file.write('\t\t\tthis->' + signal_name[j].lower() + '.data = utils::bin2int(' + signal_name[j].lower() +'_data_bin, this->' + signal_name[j].lower() + '.signal_length(), this->' + signal_name[j].lower() + '.is_unsigned());\n')
                 hpp_file.write('\t\t}\n')
 
         hpp_file.write('\t}\n')
@@ -247,7 +241,7 @@ def canMessageHppGenerator():
     # endif
     hpp_file.write("\n")
     hpp_file.write('#endif\n')
+    hpp_file.close();
 
 if __name__ == "__main__":
     canMessageHppGenerator()
-

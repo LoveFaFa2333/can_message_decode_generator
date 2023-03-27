@@ -22,6 +22,10 @@ public:
 
 
     bool is_out_of_range(const _scale_type& data){
+        if(this->signal_length_ == 1){
+            return !(data == (_scale_type)1 || data == (_scale_type)0);
+        }
+        
         return data > this->range_max_ || data < this->range_min_;
     }
 
@@ -29,7 +33,7 @@ public:
         _scale_type raw_data = this->data * this->scale_ + this->offset_;
 
         if(is_out_of_range(raw_data)){
-            std::cout << "Error : signal data is out of range , cat not return raw data , exit ..." << std::endl;
+            std::cout << "Error : signal data is out of range , cat not return raw data , data reset to 0, exit ..." << std::endl;
 
             this->data = 0;
             // exit(0);

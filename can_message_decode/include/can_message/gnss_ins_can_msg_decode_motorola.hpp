@@ -117,7 +117,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->poslat2.data = utils::bin2int(poslat2_data_bin, this->poslat2.signal_length());
+			this->poslat2.data = utils::bin2int(poslat2_data_bin, this->poslat2.signal_length(), this->poslat2.is_unsigned());
 		}
 	}
 
@@ -213,7 +213,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->poslon2.data = utils::bin2int(poslon2_data_bin, this->poslon2.signal_length());
+			this->poslon2.data = utils::bin2int(poslon2_data_bin, this->poslon2.signal_length(), this->poslon2.is_unsigned());
 		}
 	}
 
@@ -363,7 +363,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->angratex.data = utils::bin2int(angratex_data_bin, this->angratex.signal_length());
+			this->angratex.data = utils::bin2int(angratex_data_bin, this->angratex.signal_length(), this->angratex.is_unsigned());
 		}
 		// 2. AngRateY
 		{
@@ -375,7 +375,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->angratey.data = utils::bin2int(angratey_data_bin, this->angratey.signal_length());
+			this->angratey.data = utils::bin2int(angratey_data_bin, this->angratey.signal_length(), this->angratey.is_unsigned());
 		}
 		// 3. AngRateZ
 		{
@@ -387,7 +387,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->angratez.data = utils::bin2int(angratez_data_bin, this->angratez.signal_length());
+			this->angratez.data = utils::bin2int(angratez_data_bin, this->angratez.signal_length(), this->angratez.is_unsigned());
 		}
 	}
 
@@ -539,7 +539,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->angleheadingsigma.data = utils::bin2int(angleheadingsigma_data_bin, this->angleheadingsigma.signal_length());
+			this->angleheadingsigma.data = utils::bin2int(angleheadingsigma_data_bin, this->angleheadingsigma.signal_length(), this->angleheadingsigma.is_unsigned());
 		}
 		// 2. AnglePitchSigma
 		{
@@ -551,7 +551,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->anglepitchsigma.data = utils::bin2int(anglepitchsigma_data_bin, this->anglepitchsigma.signal_length());
+			this->anglepitchsigma.data = utils::bin2int(anglepitchsigma_data_bin, this->anglepitchsigma.signal_length(), this->anglepitchsigma.is_unsigned());
 		}
 		// 3. AngleRollSigma
 		{
@@ -563,7 +563,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->anglerollsigma.data = utils::bin2int(anglerollsigma_data_bin, this->anglerollsigma.signal_length());
+			this->anglerollsigma.data = utils::bin2int(anglerollsigma_data_bin, this->anglerollsigma.signal_length(), this->anglerollsigma.is_unsigned());
 		}
 	}
 
@@ -715,7 +715,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->angleheading.data = utils::bin2int(angleheading_data_bin, this->angleheading.signal_length());
+			this->angleheading.data = utils::bin2int(angleheading_data_bin, this->angleheading.signal_length(), this->angleheading.is_unsigned());
 		}
 		// 2. AnglePitch
 		{
@@ -727,7 +727,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->anglepitch.data = utils::bin2int(anglepitch_data_bin, this->anglepitch.signal_length());
+			this->anglepitch.data = utils::bin2int(anglepitch_data_bin, this->anglepitch.signal_length(), this->anglepitch.is_unsigned());
 		}
 		// 3. AngleRoll
 		{
@@ -739,7 +739,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->angleroll.data = utils::bin2int(angleroll_data_bin, this->angleroll.signal_length());
+			this->angleroll.data = utils::bin2int(angleroll_data_bin, this->angleroll.signal_length(), this->angleroll.is_unsigned());
 		}
 	}
 
@@ -891,7 +891,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->accelx.data = utils::bin2int(accelx_data_bin, this->accelx.signal_length());
+			this->accelx.data = utils::bin2int(accelx_data_bin, this->accelx.signal_length(), this->accelx.is_unsigned());
 		}
 		// 2. AccelY
 		{
@@ -903,7 +903,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->accely.data = utils::bin2int(accely_data_bin, this->accely.signal_length());
+			this->accely.data = utils::bin2int(accely_data_bin, this->accely.signal_length(), this->accely.is_unsigned());
 		}
 		// 3. AccelZ
 		{
@@ -915,7 +915,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->accelz.data = utils::bin2int(accelz_data_bin, this->accelz.signal_length());
+			this->accelz.data = utils::bin2int(accelz_data_bin, this->accelz.signal_length(), this->accelz.is_unsigned());
 		}
 	}
 
@@ -1094,7 +1094,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->velesigma.data = utils::bin2int(velesigma_data_bin, this->velesigma.signal_length());
+			this->velesigma.data = utils::bin2int(velesigma_data_bin, this->velesigma.signal_length(), this->velesigma.is_unsigned());
 		}
 		// 2. VelNSigma
 		{
@@ -1106,7 +1106,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->velnsigma.data = utils::bin2int(velnsigma_data_bin, this->velnsigma.signal_length());
+			this->velnsigma.data = utils::bin2int(velnsigma_data_bin, this->velnsigma.signal_length(), this->velnsigma.is_unsigned());
 		}
 		// 3. VelUSigma
 		{
@@ -1118,7 +1118,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->velusigma.data = utils::bin2int(velusigma_data_bin, this->velusigma.signal_length());
+			this->velusigma.data = utils::bin2int(velusigma_data_bin, this->velusigma.signal_length(), this->velusigma.is_unsigned());
 		}
 		// 4. VelSigma
 		{
@@ -1130,7 +1130,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->velsigma.data = utils::bin2int(velsigma_data_bin, this->velsigma.signal_length());
+			this->velsigma.data = utils::bin2int(velsigma_data_bin, this->velsigma.signal_length(), this->velsigma.is_unsigned());
 		}
 	}
 
@@ -1256,7 +1256,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->gpsweek.data = utils::bin2int(gpsweek_data_bin, this->gpsweek.signal_length());
+			this->gpsweek.data = utils::bin2int(gpsweek_data_bin, this->gpsweek.signal_length(), this->gpsweek.is_unsigned());
 		}
 		// 2. GpsTime
 		{
@@ -1268,7 +1268,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->gpstime.data = utils::bin2int(gpstime_data_bin, this->gpstime.signal_length());
+			this->gpstime.data = utils::bin2int(gpstime_data_bin, this->gpstime.signal_length(), this->gpstime.is_unsigned());
 		}
 	}
 
@@ -1446,7 +1446,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->vele.data = utils::bin2int(vele_data_bin, this->vele.signal_length());
+			this->vele.data = utils::bin2int(vele_data_bin, this->vele.signal_length(), this->vele.is_unsigned());
 		}
 		// 2. VelN
 		{
@@ -1458,7 +1458,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->veln.data = utils::bin2int(veln_data_bin, this->veln.signal_length());
+			this->veln.data = utils::bin2int(veln_data_bin, this->veln.signal_length(), this->veln.is_unsigned());
 		}
 		// 3. VelU
 		{
@@ -1470,7 +1470,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->velu.data = utils::bin2int(velu_data_bin, this->velu.signal_length());
+			this->velu.data = utils::bin2int(velu_data_bin, this->velu.signal_length(), this->velu.is_unsigned());
 		}
 		// 4. Vel
 		{
@@ -1482,7 +1482,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->vel.data = utils::bin2int(vel_data_bin, this->vel.signal_length());
+			this->vel.data = utils::bin2int(vel_data_bin, this->vel.signal_length(), this->vel.is_unsigned());
 		}
 	}
 
@@ -1635,7 +1635,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->posesigma.data = utils::bin2int(posesigma_data_bin, this->posesigma.signal_length());
+			this->posesigma.data = utils::bin2int(posesigma_data_bin, this->posesigma.signal_length(), this->posesigma.is_unsigned());
 		}
 		// 2. PosNsigma
 		{
@@ -1647,7 +1647,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->posnsigma.data = utils::bin2int(posnsigma_data_bin, this->posnsigma.signal_length());
+			this->posnsigma.data = utils::bin2int(posnsigma_data_bin, this->posnsigma.signal_length(), this->posnsigma.is_unsigned());
 		}
 		// 3. PosUsigma
 		{
@@ -1659,7 +1659,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->posusigma.data = utils::bin2int(posusigma_data_bin, this->posusigma.signal_length());
+			this->posusigma.data = utils::bin2int(posusigma_data_bin, this->posusigma.signal_length(), this->posusigma.is_unsigned());
 		}
 	}
 
@@ -1757,7 +1757,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->posalt.data = utils::bin2int(posalt_data_bin, this->posalt.signal_length());
+			this->posalt.data = utils::bin2int(posalt_data_bin, this->posalt.signal_length(), this->posalt.is_unsigned());
 		}
 	}
 
@@ -1880,7 +1880,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->poslat.data = utils::bin2int(poslat_data_bin, this->poslat.signal_length());
+			this->poslat.data = utils::bin2int(poslat_data_bin, this->poslat.signal_length(), this->poslat.is_unsigned());
 		}
 		// 2. PosLon
 		{
@@ -1892,7 +1892,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->poslon.data = utils::bin2int(poslon_data_bin, this->poslon.signal_length());
+			this->poslon.data = utils::bin2int(poslon_data_bin, this->poslon.signal_length(), this->poslon.is_unsigned());
 		}
 	}
 
@@ -2151,7 +2151,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->system_state.data = utils::bin2int(system_state_data_bin, this->system_state.signal_length());
+			this->system_state.data = utils::bin2int(system_state_data_bin, this->system_state.signal_length(), this->system_state.is_unsigned());
 		}
 		// 2. GpsNumSatsUsed
 		{
@@ -2163,7 +2163,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->gpsnumsatsused.data = utils::bin2int(gpsnumsatsused_data_bin, this->gpsnumsatsused.signal_length());
+			this->gpsnumsatsused.data = utils::bin2int(gpsnumsatsused_data_bin, this->gpsnumsatsused.signal_length(), this->gpsnumsatsused.is_unsigned());
 		}
 		// 3. satellite_status
 		{
@@ -2175,7 +2175,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->satellite_status.data = utils::bin2int(satellite_status_data_bin, this->satellite_status.signal_length());
+			this->satellite_status.data = utils::bin2int(satellite_status_data_bin, this->satellite_status.signal_length(), this->satellite_status.is_unsigned());
 		}
 		// 4. GpsNumSats2Used
 		{
@@ -2187,7 +2187,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->gpsnumsats2used.data = utils::bin2int(gpsnumsats2used_data_bin, this->gpsnumsats2used.signal_length());
+			this->gpsnumsats2used.data = utils::bin2int(gpsnumsats2used_data_bin, this->gpsnumsats2used.signal_length(), this->gpsnumsats2used.is_unsigned());
 		}
 		// 5. GpsAge
 		{
@@ -2199,7 +2199,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->gpsage.data = utils::bin2int(gpsage_data_bin, this->gpsage.signal_length());
+			this->gpsage.data = utils::bin2int(gpsage_data_bin, this->gpsage.signal_length(), this->gpsage.is_unsigned());
 		}
 		// 6. GpsNumSats
 		{
@@ -2211,7 +2211,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->gpsnumsats.data = utils::bin2int(gpsnumsats_data_bin, this->gpsnumsats.signal_length());
+			this->gpsnumsats.data = utils::bin2int(gpsnumsats_data_bin, this->gpsnumsats.signal_length(), this->gpsnumsats.is_unsigned());
 		}
 		// 7. GpsNumSats2
 		{
@@ -2223,7 +2223,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->gpsnumsats2.data = utils::bin2int(gpsnumsats2_data_bin, this->gpsnumsats2.signal_length());
+			this->gpsnumsats2.data = utils::bin2int(gpsnumsats2_data_bin, this->gpsnumsats2.signal_length(), this->gpsnumsats2.is_unsigned());
 		}
 	}
 
@@ -2379,7 +2379,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->accelrawx.data = utils::bin2int(accelrawx_data_bin, this->accelrawx.signal_length());
+			this->accelrawx.data = utils::bin2int(accelrawx_data_bin, this->accelrawx.signal_length(), this->accelrawx.is_unsigned());
 		}
 		// 2. AccelRawY
 		{
@@ -2391,7 +2391,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->accelrawy.data = utils::bin2int(accelrawy_data_bin, this->accelrawy.signal_length());
+			this->accelrawy.data = utils::bin2int(accelrawy_data_bin, this->accelrawy.signal_length(), this->accelrawy.is_unsigned());
 		}
 		// 3. AccelRawZ
 		{
@@ -2403,7 +2403,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->accelrawz.data = utils::bin2int(accelrawz_data_bin, this->accelrawz.signal_length());
+			this->accelrawz.data = utils::bin2int(accelrawz_data_bin, this->accelrawz.signal_length(), this->accelrawz.is_unsigned());
 		}
 	}
 
@@ -2555,7 +2555,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->angraterawx.data = utils::bin2int(angraterawx_data_bin, this->angraterawx.signal_length());
+			this->angraterawx.data = utils::bin2int(angraterawx_data_bin, this->angraterawx.signal_length(), this->angraterawx.is_unsigned());
 		}
 		// 2. AngRateRawY
 		{
@@ -2567,7 +2567,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->angraterawy.data = utils::bin2int(angraterawy_data_bin, this->angraterawy.signal_length());
+			this->angraterawy.data = utils::bin2int(angraterawy_data_bin, this->angraterawy.signal_length(), this->angraterawy.is_unsigned());
 		}
 		// 3. AngRateRawZ
 		{
@@ -2579,7 +2579,7 @@ private:
 				j += (j%8 == 0)? 15 : -1;
 				index++;
 			}
-			this->angraterawz.data = utils::bin2int(angraterawz_data_bin, this->angraterawz.signal_length());
+			this->angraterawz.data = utils::bin2int(angraterawz_data_bin, this->angraterawz.signal_length(), this->angraterawz.is_unsigned());
 		}
 	}
 

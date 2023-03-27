@@ -43,12 +43,14 @@ const std::bitset<sizeof(_type) * 8> int2bin(_type data){
 
 /* 使用bitset将二进制 转为 int类型 */
 /* length 为二进制数据长度 */
-int64_t bin2int(std::bitset<sizeof(int64_t) * 8>  bin , const uint8_t& length){
+int64_t bin2int(std::bitset<sizeof(int64_t) * 8>  bin , const uint8_t& length , const bool &is_unsigned){
     if(length == 8 || length == 16 || length == 32 || length == 64)
         return bin.to_ulong();
 
     int64_t data = 0;
-    if(bin[length-1]){
+    if(is_unsigned || bin[length-1]){
+        data = (int64_t)bin.to_ulong();
+    }else{
         
         bool if_down = true;
         uint8_t index = 0;
@@ -68,8 +70,6 @@ int64_t bin2int(std::bitset<sizeof(int64_t) * 8>  bin , const uint8_t& length){
 		// std::cout << bin << std::endl;
         data = -(int64_t)bin.to_ulong();
 
-    }else{
-        data = (int64_t)bin.to_ulong();
     }
     
     return data;
